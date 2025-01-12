@@ -13,7 +13,7 @@ CREATE TABLE fortune_companies (
 INSERT INTO fortune_companies (company_name, industry, revenue, employees, healthcare_benefits, paid_time_off_days, maternity_leave_weeks, avg_employee_tenure)
 VALUES
 
-Below is the code I did to select employees by companies according to the population.
+
 
 SELECT company_name, employees,
 CASE WHEN employees >=100000 THEN "employees overpopulated"
