@@ -25,18 +25,33 @@ VALUES
     (14, 'Cutlery Set', 'Kitchen Supplies', 34.50, 40, 4.4),
     (15, 'Cozy Throw Blanket', 'Furnishings', 24.99, 100, 4.2);
 
-SELECT *
+SELECT * 
+FROM superstore;
+
+-- selected all data from table 
+
+SELECT item_name, price 
 FROM superstore
-LIMIT 5;
+ORDER BY price ASC;
 
-SELECT SUM(Price)
+-- selected each item by price 
+
+--Below is the statistics of the items by price 
+
+SELECT SUM(price)
 FROM superstore;
 
-SELECT AVG(Price)
+SELECT AVG(price)
 FROM superstore;
 
-SELECT MIN(Price)
+SELECT MAX(price)
 FROM superstore;
 
-SELECT MAX(Price)
+SELECT MIN(price)
 FROM superstore;
+
+-- This SQL orders the average rating higher than 4.5 by category
+
+SELECT category, average_rating
+FROM superstore
+WHERE average_rating>4.5;
